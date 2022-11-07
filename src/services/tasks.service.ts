@@ -1,9 +1,10 @@
 import { USER_ID } from '../constants/query-cache.constants'
 import { CreateTaskInput, ITask, UpdateTaskInput } from '../interfaces/task.interface'
+import { getItemFormLS } from '../utils/storage.util'
 import { serviceDelete, serviceGet, servicePost, servicePut } from './petitions.service'
 
 export const getAllTasks = async () => {
-  const id = window.localStorage.getItem(USER_ID)
+  const id = getItemFormLS(USER_ID)
   const { data } = await serviceGet<ITask[]>(`/tasks/owner/${id}`)
 
   return data.data
