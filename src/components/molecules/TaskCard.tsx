@@ -15,7 +15,7 @@ export const TaskCard: FC<Props> = ({ task }) => {
         <span className="text-subtitle text-sm">{currentDate.toLocaleDateString()}</span>
       </div>
       <div className="flex items-center">
-        <DropDownMenu />
+        <DropDownMenu task={task} />
       </div>
     </article>
   )

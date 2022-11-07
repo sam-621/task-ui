@@ -1,13 +1,19 @@
 import { PlusCircleIcon } from '@heroicons/react/24/solid'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useCreateTask } from '../../hooks/petitions/useCreateTask'
 
 export const CreateTaskInput = () => {
   const [content, setContent] = useState('')
   const { createTask, isLoading } = useCreateTask()
 
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    await createTask(content)
+    setContent('')
+  }
+
   return (
-    <form onSubmit={() => createTask(content)}>
+    <form noValidate onSubmit={handleSubmit}>
       <div className="flex justify-between bg-[#F3F3F3] p-2 rounded gap-1">
         <input
           type="text"

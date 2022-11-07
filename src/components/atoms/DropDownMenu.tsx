@@ -1,8 +1,15 @@
 import { Menu, Transition } from '@headlessui/react'
 import { EllipsisVerticalIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/solid'
-import { Fragment } from 'react'
+import { FC, Fragment } from 'react'
+import { useDeleteTask } from '../../hooks/petitions/useDeleteTask'
+import { ITask } from '../../interfaces/task.interface'
+import { ActionLoader } from './ActionLoader'
 
-export const DropDownMenu = () => {
+export const DropDownMenu: FC<Props> = ({ task }) => {
+  const { deleteTask, isLoading } = useDeleteTask()
+
+  if (isLoading) return <ActionLoader />
+
   return (
     <Menu as="div" className="relative">
       <Menu.Button>
@@ -36,6 +43,7 @@ export const DropDownMenu = () => {
                 className={`rounded flex items-center justify-start gap-4 text-title text-sm py-2 px-3 w-32 ${
                   active && 'bg-[#F3F3F3]'
                 }`}
+                onClick={() => deleteTask(task._id)}
               >
                 <TrashIcon width={15} height={15} className="text-primary" />
                 <span>Delete</span>
@@ -46,4 +54,8 @@ export const DropDownMenu = () => {
       </Transition>
     </Menu>
   )
+}
+
+type Props = {
+  task: ITask
 }

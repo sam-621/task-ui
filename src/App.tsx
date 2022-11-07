@@ -3,7 +3,7 @@ import { Home } from './pages/Home'
 import { BodyLayout } from './components/layout/BodyLayout'
 import { useUserId } from './hooks/useUserId'
 
-const queryClient = new QueryClient()
+export const queryClient = new QueryClient()
 
 function App() {
   useUserId()

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ITask, TaskStatus } from '../interfaces/task.interface'
 
-export const useTasksFilter = (tasks: ITask[], isLoading: boolean) => {
+export const useTasksFilter = (tasks: ITask[]) => {
   const [pendingTasks, setPendingTasks] = useState<ITask[]>([])
   const [completedTasks, setCompletedTasks] = useState<ITask[]>([])
 
@@ -11,7 +11,7 @@ export const useTasksFilter = (tasks: ITask[], isLoading: boolean) => {
 
     setPendingTasks(pending)
     setCompletedTasks(completed)
-  }, [isLoading])
+  }, [tasks.length])
 
   return {
     pendingTasks,
