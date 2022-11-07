@@ -3,7 +3,7 @@ import { TabsContainer } from '../containers/TabsContainer'
 import { TaskList } from '../TaskList'
 
 export const Tasks = () => {
-  const { tasks, isLoading } = useGetAllTasks()
+  const { completedTasks, pendingTasks, isLoading } = useGetAllTasks()
 
   if (isLoading) return <span>Loading...</span>
 
@@ -11,7 +11,7 @@ export const Tasks = () => {
     <>
       <TabsContainer
         tabs={['Pendientes', 'Completadas']}
-        contents={[<TaskList tasks={tasks!} />]}
+        contents={[<TaskList tasks={pendingTasks!} />, <TaskList tasks={completedTasks!} />]}
       />
     </>
   )
