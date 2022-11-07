@@ -7,7 +7,7 @@ export const TaskCard: FC<Props> = ({ task }) => {
   const currentDate = new Date(createdAt)
 
   return (
-    <article className="flex justify-between items-center px-4 py-5">
+    <article className="flex justify-between items-center">
       <div className="flex flex-col">
         <h2 className="md:text-lg font-semibold">{content}</h2>
         <span className="text-subtitle text-sm">{currentDate.toLocaleDateString()}</span>
