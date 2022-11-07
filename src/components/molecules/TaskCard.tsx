@@ -1,6 +1,7 @@
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { FC } from 'react'
 import { ITask } from '../../interfaces/task.interface'
+import { StatusBox } from '../atoms/StatusBox'
 
 export const TaskCard: FC<Props> = ({ task }) => {
   const { content, createdAt } = task
@@ -12,7 +13,8 @@ export const TaskCard: FC<Props> = ({ task }) => {
         <h2 className="md:text-lg font-semibold">{content}</h2>
         <span className="text-subtitle text-sm">{currentDate.toLocaleDateString()}</span>
       </div>
-      <div>
+      <div className="flex items-center">
+        <StatusBox task={task} />
         <EllipsisVerticalIcon width={20} height={20} />
       </div>
     </article>
