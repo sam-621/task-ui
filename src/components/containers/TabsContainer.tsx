@@ -1,9 +1,12 @@
 import { Tab } from '@headlessui/react'
 import { FC, Fragment, ReactNode } from 'react'
+import { useTabsContext } from '../../contexts/Tabs.context'
 
 export const TabsContainer: FC<Props> = ({ tabs, contents }) => {
+  const { setTabSelected } = useTabsContext()
+
   return (
-    <Tab.Group>
+    <Tab.Group onChange={(e) => setTabSelected(e)}>
       <Tab.List className="bg-[#9333EA0F] rounded-md p-1 flex justify-around mt-3">
         {tabs.map((tab) => (
           <Tab key={tab} as={Fragment}>
