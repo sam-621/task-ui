@@ -12,5 +12,5 @@ export enum TaskStatus {
 }
 
 export type CreateTaskInput = Pick<ITask, 'content' | 'ownerId' | 'status'>
-export type UpdateTaskInput = Pick<ITask, 'content' | 'status'>
+export type UpdateTaskInput = Pick<ITask, 'content' | 'status' | '_id'>
 export type GetTasksInput = Pick<ITask, 'ownerId'>

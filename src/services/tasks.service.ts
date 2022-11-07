@@ -22,8 +22,8 @@ export const createTask = async (input: CreateTaskInput) => {
   return data.data
 }
 
-export const updateTask = async (id: string, input: UpdateTaskInput) => {
-  const { data } = await servicePut<ITask>(`/tasks/update/${id}`, input)
+export const updateTask = async (input: UpdateTaskInput) => {
+  const { data } = await servicePut<ITask>(`/tasks/update/${input._id}`, input)
 
   return data.data
 }
