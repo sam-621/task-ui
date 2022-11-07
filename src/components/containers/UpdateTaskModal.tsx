@@ -13,8 +13,8 @@ export const UpdateTaskModal: FC<Props> = ({ isOpen, task, closeModal }) => {
 
   const handleSubmit = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault()
-    await updateTask(content, status)
-    closeModal()
+    const isOk = await updateTask(content, status)
+    if (isOk) closeModal()
   }
 
   return (

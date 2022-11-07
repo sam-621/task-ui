@@ -23,7 +23,9 @@ export const CreateTaskInput = () => {
           onChange={(e) => setContent(e.target.value)}
           disabled={isLoading}
         />
-        <PlusCircleIcon color={isLoading ? '#C4C4C4' : '#9333EA'} width={24} height={24} />
+        <button type="submit">
+          <PlusCircleIcon color={isLoading ? '#C4C4C4' : '#9333EA'} width={24} height={24} />
+        </button>
       </div>
     </form>
   )

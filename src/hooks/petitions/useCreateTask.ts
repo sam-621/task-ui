@@ -16,6 +16,8 @@ export const useCreateTask = () => {
 
   const onSubmit = async (content: string) => {
     try {
+      if (!content) return
+
       const createTaskInput: CreateTaskInput = {
         content: content,
         ownerId: getItemFormLS(USER_ID) || '',

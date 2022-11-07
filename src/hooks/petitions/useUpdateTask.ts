@@ -3,8 +3,10 @@ import { queryClient } from '../../App'
 import { ALL_TASKS } from '../../constants/query-cache.constants'
 import { ITask, TaskStatus, UpdateTaskInput } from '../../interfaces/task.interface'
 import { updateTask as updateTaskFetcher } from '../../services/tasks.service'
+import { useNotify } from '../useNotoify'
 
 export const useUpdateTask = (task: ITask) => {
+  const { error, success, warning } = useNotify()
   const { mutateAsync, isLoading } = useMutation(updateTaskFetcher, {
     async onSuccess() {
       await queryClient.refetchQueries(ALL_TASKS)
@@ -13,6 +15,11 @@ export const useUpdateTask = (task: ITask) => {
 
   const updateTask = async (content: string, status: TaskStatus) => {
     try {
+      if (!content) {
+        error('La tarea no debe de estar vacía')
+        return false
+      }
+
       const updateInput: UpdateTaskInput = {
         _id: task._id,
         content: content,
@@ -20,8 +27,11 @@ export const useUpdateTask = (task: ITask) => {
       }
 
       await mutateAsync(updateInput)
-    } catch (error) {
-      console.log(error)
+      success(`Tarea "${task.content}" actualizada`)
+      return true
+    } catch (err) {
+      error('Ocurrió un error inesperado, por favor recargue las página')
+      return false
     }
   }
 
