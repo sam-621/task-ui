@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { ITask } from '../interfaces/task.interface'
-import { TaskCard } from './TaskCard'
+import { ITask } from '../../interfaces/task.interface'
+import { TaskCard } from '../molecules/TaskCard'
 
 export const TaskList: FC<Props> = ({ tasks }) => {
   return (

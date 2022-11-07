@@ -1,6 +1,6 @@
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { FC } from 'react'
-import { ITask } from '../interfaces/task.interface'
+import { ITask } from '../../interfaces/task.interface'
 
 export const TaskCard: FC<Props> = ({ task }) => {
   const { content, createdAt } = task
