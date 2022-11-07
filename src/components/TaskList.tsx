@@ -4,9 +4,9 @@ import { TaskCard } from './TaskCard'
 
 export const TaskList: FC<Props> = ({ tasks }) => {
   return (
-    <div>
+    <div className="bg-white rounded-xl">
       {tasks.map((task) => (
-        <TaskCard task={task} />
+        <TaskCard key={task._id} task={task} />
       ))}
     </div>
   )

@@ -19,7 +19,7 @@ export const TabsContainer: FC<Props> = ({ tabs, contents }) => {
           </Tab>
         ))}
       </Tab.List>
-      <Tab.Panels>
+      <Tab.Panels className="mt-5">
         {contents.map((content, i) => (
           <Tab.Panel key={i}>{content}</Tab.Panel>
         ))}
