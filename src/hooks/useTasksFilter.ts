@@ -6,12 +6,14 @@ export const useTasksFilter = (tasks: ITask[]) => {
   const [completedTasks, setCompletedTasks] = useState<ITask[]>([])
 
   useEffect(() => {
+    if (!tasks.length) return
+
     const pending = tasks.filter((task) => task.status === TaskStatus.PENDING)
     const completed = tasks.filter((task) => task.status === TaskStatus.COMPLETED)
 
     setPendingTasks(pending)
     setCompletedTasks(completed)
-  }, [tasks.length])
+  }, [tasks])
 
   return {
     pendingTasks,
