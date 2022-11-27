@@ -19,6 +19,13 @@ yarn build
 yarn preview
 ```
 
+- Create a file named .env.local for environment variables
+
+```
+touch .env.local
+cp .env.example .env.local
+```
+
 ## Stack
 
 - React | Typescript | Vite
