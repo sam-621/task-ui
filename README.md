@@ -1,21 +1,30 @@
 # TASK UI
 
-App para el manejo de tareas
+App for the task management
 
-## Instalación
+## Installation
 
-Antes de hacer nada, debes tener instalado y corriendo el proyecto de la [api](https://github.com/sam-621/task-api)
+Before nothing, you should install and run the [api](https://github.com/sam-621/task-api)
 
-- Una vez que ya tengas el proyecto clonado en tu maquina, instala todas las dependencias
+- install all dependencies
 
 ```
 yarn
 ```
 
-- Haz build del proyecto y ejecutalo
+- Build and execute
 
 ```
 yarn build
 yarn preview
 ```
-Una vez hayas ejecutado el comando de preview en la consola aparecerá una url como esta "http://localhost:8080/" copia la que te sal e y pegala en tu navegador para previsualizar la aplicación
+
+## Stack
+
+- React | Typescript | Vite
+- React Query
+
+## User stories
+
+- User can create, edit and delete a task
+- User can see his own a tasks
