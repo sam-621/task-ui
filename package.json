@@ -71,7 +71,6 @@
     "@/organisms": "./src/core/components/organisms",
     "@/layouts": "./src/core/components/layouts",
     "@/sections": "./src/core/components/sections",
-
     "@/modules": "./src/modules"
   }
 }
