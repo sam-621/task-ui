@@ -31,6 +31,7 @@
       "@/organisms": ["core/components/organisms"],
       "@/layouts": ["core/components/layouts"],
       "@/sections": ["core/components/sections"],
+      "@/custom": ["core/components/custom"],
 
       "@/modules": ["modules"],
     }

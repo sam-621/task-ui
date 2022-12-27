@@ -27,6 +27,7 @@ export default defineConfig({
       '@/organisms': '/src/core/components/organisms',
       '@/layouts': '/src/core/components/layouts',
       '@/sections': '/src/core/components/sections',
+      '@/custom': '/src/core/components/custom',
 
       '@/modules': '/src/modules',
     },
