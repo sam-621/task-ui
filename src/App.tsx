@@ -1,14 +1,14 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ToastContainer } from 'react-toastify'
 
-import { MainLayout } from '@/layouts'
+import { TodoView } from './modules'
 
 export const queryClient = new QueryClient()
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <MainLayout />
+      <TodoView />
       <ToastContainer
         position="bottom-left"
         autoClose={5000}

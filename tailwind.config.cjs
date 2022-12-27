@@ -12,6 +12,9 @@ module.exports = {
         'sub-card': 'var(--sub-card-stroke)',
         tab: 'var(--tab-bg)',
       },
+      gridTemplateColumns: {
+        'tabs-container': '1fr 2fr',
+      },
     },
   },
   plugins: [],
