@@ -1,0 +1,10 @@
+:root {
+  --viewport-bg: #212B3B;
+  --primary-color: #ED8936;
+  --subtitle-color: #A0AEC0;
+  --title-color: #E2E8F0;
+  --card-bg: #1A202C;
+  --sub-card-stroke: #2D3748;
+
+  --tab-bg: rgba(226, 232, 240, 0.06);
+}

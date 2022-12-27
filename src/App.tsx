@@ -3,8 +3,6 @@ import { ToastContainer } from 'react-toastify'
 
 import { MainLayout } from '@/layouts'
 
-import 'react-toastify/dist/ReactToastify.css'
-
 export const queryClient = new QueryClient()
 
 function App() {

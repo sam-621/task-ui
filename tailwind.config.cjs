@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#9333EA',
-        'primary-opacity': 'rgba(147, 51, 234, 0.06)',
-        title: '#404040',
-        subtitle: '#6B7280',
-        card: '#FFF',
-        input: '#F3F3F3',
+        viewport: 'var(--viewport-bg)',
+        primary: 'var(--primary-color)',
+        subtitle: 'var(--subtitle-color)',
+        title: 'var(--title-color)',
+        card: 'var(--card-bg)',
+        'sub-card': 'var(--sub-card-stroke)',
+        tab: 'var(--tab-bg)',
       },
     },
   },
