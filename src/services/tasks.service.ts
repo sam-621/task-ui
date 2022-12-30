@@ -1,4 +1,4 @@
-import { USER_ID } from '../constants/query-cache.constants'
+import { USER_ID } from '@/constants'
 import { CreateTaskInput, ITask, UpdateTaskInput } from '../interfaces/task.interface'
 import { getItemFormLS } from '../utils/storage.util'
 import { serviceDelete, serviceGet, servicePost, servicePut } from './petitions.service'

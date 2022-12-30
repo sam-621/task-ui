@@ -2,7 +2,7 @@ import Swal from 'sweetalert2'
 import { useMutation } from '@tanstack/react-query'
 import { deleteTask as deleteTaskFetcher } from '../../services/tasks.service'
 import { queryClient } from '../../App'
-import { ALL_TASKS } from '../../constants/query-cache.constants'
+import { ALL_TASKS } from '@/constants'
 
 export const useDeleteTask = () => {
   const { mutateAsync, isLoading } = useMutation(deleteTaskFetcher, {

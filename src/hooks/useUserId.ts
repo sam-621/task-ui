@@ -1,6 +1,6 @@
+import { USER_ID } from '@/constants'
 import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
-import { USER_ID } from '../constants/query-cache.constants'
 import { getItemFormLS, setItemInLS } from '../utils/storage.util'
 
 export const useUserId = () => {

@@ -1,6 +1,6 @@
+import { ALL_TASKS, USER_ID } from '@/constants'
 import { useMutation } from '@tanstack/react-query'
 import { queryClient } from '../../App'
-import { ALL_TASKS, USER_ID } from '../../constants/query-cache.constants'
 import { useTabsContext } from '../../contexts/Tabs.context'
 import { CreateTaskInput, TaskStatus } from '../../interfaces/task.interface'
 import { createTask } from '../../services/tasks.service'

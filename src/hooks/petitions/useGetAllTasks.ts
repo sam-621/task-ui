@@ -1,5 +1,5 @@
+import { ALL_TASKS } from '@/constants'
 import { useQuery } from '@tanstack/react-query'
-import { ALL_TASKS } from '../../constants/query-cache.constants'
 import { getAllTasks } from '../../services/tasks.service'
 import { useTasksFilter } from '../useTasksFilter'
 

@@ -21,7 +21,7 @@
       "@/services": ["core/services"],
       "@/hooks": ["core/hooks"],
       "@/interfaces": ["core/interfaces"],
-      "@/constants": ["core/consta"],
+      "@/constants": ["core/constants"],
       "@/store": ["core/store"],
       "@/libs": ["core/libs"],
       "@/types": ["core/types"],
