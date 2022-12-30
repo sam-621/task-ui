@@ -2,9 +2,9 @@ import { ALL_TASKS, USER_ID } from '@/constants'
 import { CreateTaskInput, TaskStatus } from '@/interfaces'
 import { getItemFormLS } from '@/utils'
 import { useMutation } from '@tanstack/react-query'
-import { queryClient } from '../../App'
-import { useTabsContext } from '../../core/providers/Tabs'
-import { createTask } from '../../services/tasks.service'
+import { queryClient } from '../../../App'
+import { useTabsContext } from '../../providers/Tabs'
+import { createTask } from '../../../services/tasks.service'
 
 export const useCreateTask = () => {
   const { tabSelected } = useTabsContext()

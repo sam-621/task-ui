@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Home } from './pages/Home'
-import { useUserId } from './hooks/useUserId'
 import { ToastContainer } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 import { BodyLayout } from '@/layouts'
+import { useUserId } from '@/hooks'
 
 export const queryClient = new QueryClient()
 

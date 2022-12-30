@@ -1,7 +1,7 @@
+import { useUpdateTask } from '@/hooks'
 import { ITask } from '@/interfaces'
 import { Dialog, Transition } from '@headlessui/react'
 import { FC, FormEvent, Fragment, useState } from 'react'
-import { useUpdateTask } from '../../../hooks/petitions/useUpdateTask'
 import { ActionLoader } from '../atoms/ActionLoader'
 import { StatusBox } from '../atoms/StatusBox'
 

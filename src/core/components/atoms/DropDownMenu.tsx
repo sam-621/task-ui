@@ -1,9 +1,8 @@
+import { useDeleteTask, useToggle } from '@/hooks'
 import { ITask } from '@/interfaces'
 import { Menu, Transition } from '@headlessui/react'
 import { EllipsisVerticalIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/solid'
 import { FC, Fragment } from 'react'
-import { useDeleteTask } from '../../../hooks/petitions/useDeleteTask'
-import { useToggle } from '../../../hooks/useToggle'
 import { UpdateTaskModal } from '../containers/UpdateTaskModal'
 import { ActionLoader } from './ActionLoader'
 
