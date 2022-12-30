@@ -1,7 +1,7 @@
 import { USER_ID } from '@/constants'
 import { CreateTaskInput, ITask, UpdateTaskInput } from '@/interfaces'
 import { getItemFormLS } from '@/utils'
-import { serviceDelete, serviceGet, servicePost, servicePut } from './petitions.service'
+import { serviceDelete, serviceGet, servicePost, servicePut } from './petitions'
 
 export const getAllTasks = async () => {
   const id = getItemFormLS(USER_ID)

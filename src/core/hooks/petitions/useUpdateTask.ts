@@ -2,7 +2,7 @@ import { ALL_TASKS } from '@/constants'
 import { ITask, TaskStatus, UpdateTaskInput } from '@/interfaces'
 import { useMutation } from '@tanstack/react-query'
 import { queryClient } from '../../../App'
-import { updateTask as updateTaskFetcher } from '../../../services/tasks.service'
+import { updateTask as updateTaskFetcher } from '@/services'
 import { useNotify } from '../useNotify'
 
 export const useUpdateTask = (task: ITask) => {

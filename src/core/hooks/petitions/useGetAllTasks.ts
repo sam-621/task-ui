@@ -1,6 +1,6 @@
 import { ALL_TASKS } from '@/constants'
+import { getAllTasks } from '@/services'
 import { useQuery } from '@tanstack/react-query'
-import { getAllTasks } from '../../../services/tasks.service'
 import { useTasksFilter } from '../useTasksFilter'
 
 export const useGetAllTasks = () => {

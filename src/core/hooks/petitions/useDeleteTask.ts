@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import { useMutation } from '@tanstack/react-query'
-import { deleteTask as deleteTaskFetcher } from '../../../services/tasks.service'
+import { deleteTask as deleteTaskFetcher } from '@/services'
 import { queryClient } from '../../../App'
 import { ALL_TASKS } from '@/constants'
 
