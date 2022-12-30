@@ -1,7 +1,7 @@
 import { USER_ID } from '@/constants'
+import { getItemFormLS, setItemInLS } from '@/utils'
 import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
-import { getItemFormLS, setItemInLS } from '../utils/storage.util'
 
 export const useUserId = () => {
   useEffect(() => {
