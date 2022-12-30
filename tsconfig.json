@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "@/contexts": ["core/contexts"],
+      "@/providers": ["core/providers"],
       "@/utils": ["core/utils"],
       "@/services": ["core/services"],
       "@/hooks": ["core/hooks"],

@@ -12,7 +12,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@/contexts': '/src/core/contexts',
+      '@/providers': '/src/core/providers',
       '@/utils': '/src/core/utils',
       '@/services': '/src/core/services',
       '@/hooks': '/src/core/hooks',

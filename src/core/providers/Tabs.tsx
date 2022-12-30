@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from 'react'
-import { TabsContextSchema } from '../interfaces/tabs-context.interface'
+import { TabsContextSchema } from '../../interfaces/tabs-context.interface'
 
 export const TabsContext = createContext<TabsContextSchema>({
   tabSelected: 0,
