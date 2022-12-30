@@ -27,12 +27,12 @@ export const DropDownMenu: FC<Props> = ({ task }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Menu.Items className="bg-white shadow flex flex-col gap-1 absolute rounded p-1 z-50 right-0">
+          <Menu.Items className="bg-sub-card shadow flex flex-col gap-1 absolute rounded p-1 z-50 right-0">
             <Menu.Item>
               {({ active }) => (
                 <button
                   className={`rounded flex items-center justify-start gap-4 text-title text-sm py-2 px-3 w-32 ${
-                    active && 'bg-[#F3F3F3]'
+                    active && 'bg-card'
                   }`}
                   onClick={toggle}
                 >
@@ -45,7 +45,7 @@ export const DropDownMenu: FC<Props> = ({ task }) => {
               {({ active }) => (
                 <button
                   className={`rounded flex items-center justify-start gap-4 text-title text-sm py-2 px-3 w-32 ${
-                    active && 'bg-[#F3F3F3]'
+                    active && 'bg-card'
                   }`}
                   onClick={() => deleteTask(task._id)}
                 >

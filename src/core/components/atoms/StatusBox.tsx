@@ -11,7 +11,7 @@ export const StatusBox: FC<Props> = ({ status, setStatus }) => {
   return (
     <Listbox value={status} onChange={setStatus}>
       <div className="">
-        <Listbox.Button className={`text-sm p-2 rounded flex items-center bg-[#F3F3F3]`}>
+        <Listbox.Button className={`text-base p-2 rounded flex items-center bg-sub-card`}>
           <span className={`${isPending ? 'text-yellow-500' : 'text-blue-500'} w-20 text-left`}>
             {getStatusName(status)}
           </span>
@@ -26,13 +26,13 @@ export const StatusBox: FC<Props> = ({ status, setStatus }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute bg-white shadow-sm z-50 gap-1 my-1">
+          <Listbox.Options className="absolute bg-sub-card shadow-sm z-50 gap-1 my-1 p-1 rounded-sm">
             {optionalStatus.map((status) => (
               <Listbox.Option
                 key={status}
                 value={status}
                 className={({ active }) =>
-                  `text-sm py-2 px-6 ${active && 'bg-[#F3F3F3]'} cursor-default rounded`
+                  `text-title text-base py-2 px-6 ${active && 'bg-card'} cursor-default rounded`
                 }
               >
                 {getStatusName(status)}

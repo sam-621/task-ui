@@ -14,16 +14,16 @@ export const useDeleteTask = () => {
   const deleteTask = async (taskId: string) => {
     try {
       const res = await Swal.fire({
-        title: '¿Estás seguro que deseas eliminar esta tarea?',
-        text: 'Esta acción no se puede revertir!',
+        title: 'Are you sure about deleting this task?',
+        text: 'This actions can not be undone',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#9333EA',
+        confirmButtonColor: 'var(--primary-color)',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes, delete it!',
-        background: '#FFF',
+        background: 'var(--card-bg)',
         iconColor: '#d33',
-        color: '#404040',
+        color: 'var(--title-color)',
       })
 
       if (res.value) {

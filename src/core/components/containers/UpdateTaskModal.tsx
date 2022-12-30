@@ -43,7 +43,7 @@ export const UpdateTaskModal: FC<Props> = ({ isOpen, task, closeModal }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-card p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-title">
                   Edit Task
                 </Dialog.Title>
@@ -54,7 +54,7 @@ export const UpdateTaskModal: FC<Props> = ({ isOpen, task, closeModal }) => {
                         Content
                       </label>
                       <input
-                        className="bg-[#F3F3F3] outline-none text-title w-full p-2 rounded"
+                        className="bg-sub-card outline-none text-title w-full p-2 rounded"
                         id="input-1"
                         type="text"
                         value={content}
@@ -71,7 +71,7 @@ export const UpdateTaskModal: FC<Props> = ({ isOpen, task, closeModal }) => {
                       <ActionLoader />
                     ) : (
                       <button type="submit" className="bg-primary text-white rounded py-2 px-4">
-                        Guardar
+                        Save
                       </button>
                     )}
                   </div>

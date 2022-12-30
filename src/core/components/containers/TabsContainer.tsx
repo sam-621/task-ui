@@ -7,26 +7,30 @@ export const TabsContainer: FC<Props> = ({ tabs, contents }) => {
 
   return (
     <Tab.Group onChange={(e) => setTabSelected(e)}>
-      <Tab.List className="bg-[#9333EA0F] rounded-md p-1 flex justify-around mt-3">
-        {tabs.map((tab) => (
-          <Tab key={tab} as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`${
-                  selected && 'bg-white'
-                } text-primary rounded  outline-none text-sm w-full py-2`}
-              >
-                {tab}
-              </button>
-            )}
-          </Tab>
-        ))}
-      </Tab.List>
-      <Tab.Panels className="mt-5">
-        {contents.map((content, i) => (
-          <Tab.Panel key={i}>{content}</Tab.Panel>
-        ))}
-      </Tab.Panels>
+      <div className="flex flex-col gap-6 md:grid grid-cols-tabs-container">
+        <Tab.List className="rounded-md p-1 flex gap-4 justify-around mt-3 md:flex-col md:justify-center">
+          {tabs.map((tab) => (
+            <Tab key={tab} as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`${
+                    selected ? 'bg-sub-card text-primary' : 'text-subtitle'
+                  } text-center rounded text-base outline-none w-full p-2 md:text-left`}
+                >
+                  {tab}
+                </button>
+              )}
+            </Tab>
+          ))}
+        </Tab.List>
+        <Tab.Panels className="mt-5">
+          {contents.map((content, i) => (
+            <Tab.Panel key={i} className="bg-card w-full">
+              {content}
+            </Tab.Panel>
+          ))}
+        </Tab.Panels>
+      </div>
     </Tab.Group>
   )
 }

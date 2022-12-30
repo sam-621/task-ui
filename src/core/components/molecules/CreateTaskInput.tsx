@@ -14,17 +14,21 @@ export const CreateTaskInput = () => {
 
   return (
     <form noValidate onSubmit={handleSubmit}>
-      <div className="flex justify-between bg-[#F3F3F3] p-2 rounded gap-1">
+      <div className="flex justify-between bg-sub-card p-2 rounded gap-1">
         <input
           type="text"
           placeholder="Agrega una tarea"
-          className="bg-[#F3F3F3] outline-none text-subtitle w-full"
+          className="bg-sub-card outline-none text-subtitle w-full"
           value={content}
           onChange={(e) => setContent(e.target.value)}
           disabled={isLoading}
         />
         <button type="submit">
-          <PlusCircleIcon color={isLoading ? '#C4C4C4' : '#9333EA'} width={24} height={24} />
+          <PlusCircleIcon
+            className={`${isLoading ? 'text-disable' : 'text-primary'}`}
+            width={24}
+            height={24}
+          />
         </button>
       </div>
     </form>
