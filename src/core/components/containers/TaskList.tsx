@@ -1,5 +1,5 @@
+import { ITask } from '@/interfaces'
 import { FC } from 'react'
-import { ITask } from '../../../interfaces/task.interface'
 import { CreateTaskInput } from '../molecules/CreateTaskInput'
 import { TaskCard } from '../molecules/TaskCard'
 

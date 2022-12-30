@@ -1,9 +1,9 @@
 import { ALL_TASKS, USER_ID } from '@/constants'
+import { CreateTaskInput, TaskStatus } from '@/interfaces'
 import { getItemFormLS } from '@/utils'
 import { useMutation } from '@tanstack/react-query'
 import { queryClient } from '../../App'
 import { useTabsContext } from '../../core/providers/Tabs'
-import { CreateTaskInput, TaskStatus } from '../../interfaces/task.interface'
 import { createTask } from '../../services/tasks.service'
 
 export const useCreateTask = () => {

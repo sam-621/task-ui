@@ -1,8 +1,8 @@
+import { TaskStatus } from '@/interfaces'
 import { getStatusName } from '@/utils'
 import { Listbox, Transition } from '@headlessui/react'
 import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 import { Dispatch, FC, Fragment, useState } from 'react'
-import { ITask, TaskStatus } from '../../../interfaces/task.interface'
 
 const optionalStatus = [TaskStatus.PENDING, TaskStatus.COMPLETED]
 

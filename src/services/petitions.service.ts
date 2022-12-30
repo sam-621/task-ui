@@ -1,6 +1,6 @@
 import { BASE_API_URL } from '@/constants'
+import { IResponse } from '@/interfaces'
 import axios from 'axios'
-import { IResponse } from '../interfaces/util.interface'
 
 const instance = axios.create({
   baseURL: BASE_API_URL,

@@ -1,7 +1,7 @@
 import { ALL_TASKS } from '@/constants'
+import { ITask, TaskStatus, UpdateTaskInput } from '@/interfaces'
 import { useMutation } from '@tanstack/react-query'
 import { queryClient } from '../../App'
-import { ITask, TaskStatus, UpdateTaskInput } from '../../interfaces/task.interface'
 import { updateTask as updateTaskFetcher } from '../../services/tasks.service'
 import { useNotify } from '../useNotoify'
 

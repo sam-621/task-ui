@@ -1,6 +1,6 @@
+import { ITask } from '@/interfaces'
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { FC } from 'react'
-import { ITask } from '../../../interfaces/task.interface'
 import { DropDownMenu } from '../atoms/DropDownMenu'
 import { StatusBox } from '../atoms/StatusBox'
 

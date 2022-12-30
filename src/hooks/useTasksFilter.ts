@@ -1,5 +1,5 @@
+import { ITask, TaskStatus } from '@/interfaces'
 import { useEffect, useState } from 'react'
-import { ITask, TaskStatus } from '../interfaces/task.interface'
 
 export const useTasksFilter = (tasks: ITask[]) => {
   const [pendingTasks, setPendingTasks] = useState<ITask[]>([])

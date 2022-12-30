@@ -1,6 +1,6 @@
 import { USER_ID } from '@/constants'
+import { CreateTaskInput, ITask, UpdateTaskInput } from '@/interfaces'
 import { getItemFormLS } from '@/utils'
-import { CreateTaskInput, ITask, UpdateTaskInput } from '../interfaces/task.interface'
 import { serviceDelete, serviceGet, servicePost, servicePut } from './petitions.service'
 
 export const getAllTasks = async () => {
