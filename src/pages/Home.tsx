@@ -1,6 +1,6 @@
 import { TabsProvider } from '@/providers'
-import { Header } from '../components/sections/Header'
-import { Tasks } from '../components/sections/Tasks'
+import { Header } from '../core/components/sections/Header'
+import { Tasks } from '../core/components/sections/Tasks'
 
 export const Home = () => {
   return (

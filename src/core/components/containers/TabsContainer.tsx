@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react'
 import { FC, Fragment, ReactNode } from 'react'
-import { useTabsContext } from '../../core/providers/Tabs'
+import { useTabsContext } from '../../providers/Tabs'
 
 export const TabsContainer: FC<Props> = ({ tabs, contents }) => {
   const { setTabSelected } = useTabsContext()

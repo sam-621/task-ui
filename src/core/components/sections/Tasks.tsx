@@ -1,4 +1,4 @@
-import { useGetAllTasks } from '../../hooks/petitions/useGetAllTasks'
+import { useGetAllTasks } from '../../../hooks/petitions/useGetAllTasks'
 import { SectionLoader } from '../atoms/SectionLoader'
 import { TabsContainer } from '../containers/TabsContainer'
 import { TaskList } from '../containers/TaskList'

@@ -8,7 +8,7 @@ export const BodyLayout: FC<Props> = ({ children }) => {
         <title>Task ui | Home</title>
         <meta name="description" content="Aplication to manage your tasks" />
       </Helmet>
-      <div className=" h-screen px-5 py-4 md:px-10 lg:px-44 xl:px-96">{children}</div>
+      <div className="h-screen max-w-[672px] mt-4 mx-7 md:mx-auto md:mt-20">{children}</div>
     </>
   )
 }

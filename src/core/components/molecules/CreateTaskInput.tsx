@@ -1,6 +1,6 @@
 import { PlusCircleIcon } from '@heroicons/react/24/solid'
 import { FormEvent, useState } from 'react'
-import { useCreateTask } from '../../hooks/petitions/useCreateTask'
+import { useCreateTask } from '../../../hooks/petitions/useCreateTask'
 
 export const CreateTaskInput = () => {
   const [content, setContent] = useState('')
