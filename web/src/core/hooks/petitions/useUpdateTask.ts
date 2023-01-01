@@ -16,7 +16,7 @@ export const useUpdateTask = (task: ITask) => {
   const updateTask = async (content: string, status: TaskStatus) => {
     try {
       if (!content) {
-        error('La tarea no debe de estar vacía')
+        error('The content must not be empty')
         return false
       }
 
@@ -27,10 +27,10 @@ export const useUpdateTask = (task: ITask) => {
       }
 
       await mutateAsync(updateInput)
-      success(`Tarea "${task.content}" actualizada`)
+      success(`Task "${task.content}" updated`)
       return true
     } catch (err) {
-      error('Ocurrió un error inesperado, por favor recargue las página')
+      error('Unexpected error ocurred, please reload the page')
       return false
     }
   }

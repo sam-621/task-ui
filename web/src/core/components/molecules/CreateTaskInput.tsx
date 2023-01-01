@@ -17,7 +17,7 @@ export const CreateTaskInput = () => {
       <div className="flex justify-between bg-sub-card p-2 rounded gap-1">
         <input
           type="text"
-          placeholder="Agrega una tarea"
+          placeholder="Add a task"
           className="bg-sub-card outline-none text-subtitle w-full"
           value={content}
           onChange={(e) => setContent(e.target.value)}

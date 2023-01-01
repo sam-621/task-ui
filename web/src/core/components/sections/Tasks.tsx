@@ -8,7 +8,7 @@ export const Tasks = () => {
   return (
     <>
       <TabsContainer
-        tabs={['Pendientes', 'Completadas']}
+        tabs={['Pending', 'Completed']}
         contents={[<TaskList tasks={pendingTasks} />, <TaskList tasks={completedTasks} />]}
       />
     </>
