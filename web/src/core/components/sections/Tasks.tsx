@@ -1,18 +1,15 @@
 import { useGetAllTasks } from '@/hooks'
-import { SectionLoader } from '../atoms/SectionLoader'
 import { TabsContainer } from '../containers/TabsContainer'
 import { TaskList } from '../containers/TaskList'
 
 export const Tasks = () => {
-  const { completedTasks, pendingTasks, isLoading } = useGetAllTasks()
-
-  if (isLoading) return <SectionLoader />
+  const { completedTasks, pendingTasks } = useGetAllTasks()
 
   return (
     <>
       <TabsContainer
         tabs={['Pendientes', 'Completadas']}
-        contents={[<TaskList tasks={pendingTasks!} />, <TaskList tasks={completedTasks!} />]}
+        contents={[<TaskList tasks={pendingTasks} />, <TaskList tasks={completedTasks} />]}
       />
     </>
   )

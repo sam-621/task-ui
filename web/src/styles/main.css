@@ -1,3 +1,6 @@
 /* Base */
 @import url('./base/colors.css');
 @import url('./base/utilities.css');
+
+/* Loaders */
+@import url('./loaders/loaders.css');
