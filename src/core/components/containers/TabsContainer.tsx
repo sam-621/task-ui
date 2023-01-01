@@ -25,7 +25,7 @@ export const TabsContainer: FC<Props> = ({ tabs, contents }) => {
         </Tab.List>
         <Tab.Panels className="mt-5">
           {contents.map((content, i) => (
-            <Tab.Panel key={i} className="bg-card w-full">
+            <Tab.Panel key={i} className="bg-card w-full rounded-xl">
               {content}
             </Tab.Panel>
           ))}
