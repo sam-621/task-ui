@@ -1,12 +1,5 @@
-import { TabsProvider } from '@/providers'
-import { Header } from '../core/components/sections/Header'
-import { Tasks } from '../core/components/sections/Tasks'
+import { HomeView } from '@/modules'
 
 export const Home = () => {
-  return (
-    <TabsProvider>
-      <Header />
-      <Tasks />
-    </TabsProvider>
-  )
+  return <HomeView />
 }

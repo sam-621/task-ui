@@ -2,5 +2,8 @@
 @import url('./base/colors.css');
 @import url('./base/utilities.css');
 
+/* Layouts */
+@import url('./layout/layouts.css');
+
 /* Loaders */
 @import url('./loaders/loaders.css');

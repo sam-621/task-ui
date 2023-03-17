@@ -1,8 +1,6 @@
 import { ITask } from '@/interfaces'
-import { EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { FC } from 'react'
 import { DropDownMenu } from '../atoms/DropDownMenu'
-import { StatusBox } from '../atoms/StatusBox'
 
 export const TaskCard: FC<Props> = ({ task }) => {
   const { content, createdAt } = task

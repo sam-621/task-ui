@@ -1,0 +1,17 @@
+:root {
+  --task-card-height: 48px;
+  --task-cards-show: 5;
+  --task-card-gap: 20px;
+}
+
+.task_panel_height {
+  height: calc((var(--task-card-height) * var(--task-cards-show)) + (var(--task-card-gap) * (var(--task-cards-show) - 1)));
+}
+
+.task_card_height {
+  height: var(--task-card-height);
+}
+
+.task-card-gap {
+  gap: var(--task-card-gap);
+}
