@@ -1,7 +1,7 @@
 import { ALL_TASKS, USER_ID } from '@/constants'
 import { CreateTaskInput, TaskStatus } from '@/interfaces'
 import { createTask } from '@/services'
-import { getItemFormLS } from '@/utils'
+import { getItemFormLS, notify } from '@/utils'
 import { useMutation } from '@tanstack/react-query'
 import { queryClient } from '../../../App'
 import { useTabsContext } from '../../providers/Tabs'
@@ -9,8 +9,17 @@ import { useTabsContext } from '../../providers/Tabs'
 export const useCreateTask = () => {
   const { tabSelected } = useTabsContext()
   const { mutateAsync, isLoading } = useMutation(createTask, {
-    async onSuccess() {
+    onMutate() {
+      const notificationId = notify.loading('Creating task')
+
+      return { notificationId }
+    },
+    async onSuccess(_, __, ctx) {
+      notify.success(`Task created`, { id: ctx?.notificationId })
       await queryClient.refetchQueries(ALL_TASKS)
+    },
+    onError(_, __, ctx) {
+      notify.error(`Couldn't create the task`, { id: ctx?.notificationId })
     },
   })
 

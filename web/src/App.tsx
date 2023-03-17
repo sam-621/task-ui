@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Home } from './pages/Home'
-import { ToastContainer } from 'react-toastify'
+import { Toaster } from 'react-hot-toast'
 
 import 'react-toastify/dist/ReactToastify.css'
 import { BodyLayout } from '@/layouts'
@@ -15,7 +15,7 @@ function App() {
       <BodyLayout>
         <Home />
       </BodyLayout>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-left"
         autoClose={5000}
         hideProgressBar={false}
@@ -26,7 +26,8 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-      />
+      /> */}
+      <Toaster position="bottom-right" />
     </QueryClientProvider>
   )
 }
